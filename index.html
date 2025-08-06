@@ -1,11 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Learn About open source</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Open Source - Pull Request Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            color: #2d3748;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #4a5568;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+        
+        .step {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .code-block {
+            background: #1a202c;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        .highlight {
+            background: #fef5e7;
+            border-left: 4px solid #f6ad55;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .intro {
+            text-align: center;
+            font-size: 1.2em;
+            color: #4a5568;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(45deg, #f0f4ff, #e6f3ff);
+            border-radius: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #2d3748;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
-    Learn to make a pull request
-</body>
-</html>
+    <div class="container">
+        <h1>🚀 Guia Completo: Como Fazer um Pull Request</h1>
+        
+        <div class="intro">
+            <strong>Bem-vindo ao mundo do Open Source!</strong><br>
+            Este guia vai te ensinar passo a passo como contribuir para projetos open source através de Pull Requests.
+        </div>
+
+        <h2>🎯 O que é um Pull Request?</h2>
+        <div class="step">
+            <p>Um <strong>Pull Request (PR)</strong> é uma solicitação para que suas alterações sejam incorporadas ao projeto original. É como dizer: "Olha, fiz algumas melhorias no seu código, que tal dar uma olhada?"</p>
+        </div>
+
+        <h2>📋 Pré-requisitos</h2>
+        <div class="step">
+            <ul>
+                <li><span class="emoji">✅</span> Ter uma conta no GitHub</li>
+                <li><span class="emoji">✅</span> Git instalado no seu computador</li>
+                <li><span class="emoji">✅</span> Ter feito um fork do repositório original</li>
+                <li><span class="emoji">✅</span> Conhecimento básico de Git</li>
+            </ul>
+        </div>
+
+        <h2>🛠️ Passo a Passo</h2>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>Clone seu fork localmente</strong>
+            <div class="code-block">
+git clone https://github.com/SEU_USUARIO/open-source.git
+cd open-source
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>Crie uma nova branch para suas alterações</strong>
+            <div class="code-block">
+git checkout -b minha-contribuicao
+# ou
+git checkout -b fix/nome-do-bug
+            </div>
+            <div class="highlight">
+                <strong>Dica:</strong> Use nomes descritivos para suas branches como "fix/typo-readme" ou "feature/nova-funcionalidade"
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>Faça suas alterações</strong>
+            <p>Edite os arquivos necessários, adicione novos recursos, corrija bugs, melhore a documentação, etc.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <strong>Adicione e commit suas alterações</strong>
+            <div class="code-block">
+git add .
+git commit -m "Adiciona guia de pull request no README"
+            </div>
+            <div class="highlight">
+                <strong>Boas práticas para commits:</strong>
+                <ul>
+                    <li>Use mensagens claras e descritivas</li>
+                    <li>Escreva no presente ("Adiciona" ao invés de "Adicionado")</li>
+                    <li>Seja específico sobre o que foi alterado</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">5</span>
+            <strong>Envie suas alterações para o GitHub</strong>
+            <div class="code-block">
+git push origin minha-contribuicao
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">6</span>
+            <strong>Crie o Pull Request no GitHub</strong>
+            <ul>
+                <li>Vá para seu fork no GitHub</li>
+                <li>Clique no botão verde "Compare & pull request"</li>
+                <li>Ou vá em "Pull requests" → "New pull request"</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">7</span>
+            <strong>Preencha as informações do PR</strong>
+            <ul>
+                <li><strong>Título:</strong> Descrição breve e clara</li>
+                <li><strong>Descrição:</strong> Explique o que foi alterado e por quê</li>
+                <li><strong>Screenshots:</strong> Se aplicável, adicione imagens</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">8</span>
+            <strong>Aguarde a revisão</strong>
+            <p>O mantenedor do projeto irá revisar seu código e pode:</p>
+            <ul>
+                <li><span class="emoji">✅</span> Aceitar e fazer merge</li>
+                <li><span class="emoji">💬</span> Solicitar alterações</li>
+                <li><span class="emoji">❌</span> Rejeitar (raramente, se não seguir as diretrizes)</li>
+            </ul>
+        </div>
+
+        <h2>📝 Template de Descrição de PR</h2>
+        <div class="code-block">
+## Descrição
+Breve descrição das alterações realizadas.
+
+## Tipo de alteração
+- [ ] Bug fix
+- [ ] Nova funcionalidade
+- [ ] Documentação
+- [ ] Refatoração
+
+## Como testar
+1. Passos para reproduzir
+2. Comportamento esperado
+3. Screenshots (se aplicável)
+
+## Checklist
+- [ ] Meu código segue as diretrizes do projeto
+- [ ] Testei minhas alterações
+- [ ] Atualizei a documentação se necessário
+        </div>
+
+        <h2>🎉 Dicas de Ouro</h2>
+        <div class="step">
+            <ul>
+                <li><span class="emoji">🔍</span> <strong>Leia o README:</strong> Sempre verifique as
